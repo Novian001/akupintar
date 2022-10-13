@@ -16,13 +16,6 @@ return new class extends Migration
         Schema::create('jurusan', function (Blueprint $table) {
             $table->string('id', 36)->primary();
             $table->string('name');
-            $table->string('akreditas');
-            $table->string('kuota');
-            $table->string('pendaftar');
-            $table->float('keketatan');
-            $table->integer("uktMin");
-            $table->integer('uktMax');
-            
             $table->timestamps();
         });
     }

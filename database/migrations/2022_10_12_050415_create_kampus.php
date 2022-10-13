@@ -16,15 +16,15 @@ return new class extends Migration
         Schema::create('kampus', function (Blueprint $table) {
             $table->string('id', 36)->primary();
             $table->string('name');
-            $table->string('jenis');
             $table->string('status');
-            $table->string('akrediatasi');
-            $table->string('notel');
-            $table->string('fax');
+            $table->string('tipe');
+            $table->string('akrediatas');
+            $table->string('mengikuti');
             $table->string('alamat');
             $table->float('rank');
             $table->text('profil');
-            $table->string('prodi');
+            $table->text('sejarah');
+            $table->string('sum_prodi');
             $table->timestamps();
         });
     }

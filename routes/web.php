@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KampusController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::controller(KampusController::class)->group(function () {
+    Route::get('/', 'index');
+    Route::post('/follow', 'follow');
+    Route::get('/list', 'list');
 });
