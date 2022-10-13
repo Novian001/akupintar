@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('jenis');
             $table->string('status');
+            $table->boolean('tipe');
             $table->string('akrediatasi');
             $table->string('notel');
             $table->string('fax');
